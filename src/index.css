@@ -1,64 +1,72 @@
-/* General body styling */
+/* General styles for the entire page */
 body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f1f1f1;
-  color: #333;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-/* BookList container styling */
-.BookList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 20px;
-  width: 90vw;
-  background-color: saddlebrown;
+  row-gap: 2rem;
+  height: 100vh;
 }
 
-/* Media query for larger screens */
-@media screen and (min-width: 768px) {
-  .BookList {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
+/* Styles for the BookList section */
+.BookList {
+  background-color: #fafafa;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  margin-top: 2rem;
+ 
 }
 
-/* Styling for book articles */
+/* Styles for the heading in the BookList */
+.BookList h1 {
+  font-size: 2em;
+  margin-right: 1.5rem;
+
+}
+
+/* Styles for each book article */
 .book {
-  background: white;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-  width: calc(100% - 20px);
-  max-width: 300px;
-  margin: 10px;
+  background-color: #fafafa;
+  padding: 15px;
+ 
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align:justify;
 }
 
+/* Styles for the book image */
 .book img {
   max-width: 100%;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-.book h3, .book h4 {
-  margin: 10px 0;
+/* Styles for the book title */
+.book h3 {
+  font-size: 1.5em;
+  margin: 0 0 10px;
+  color: #333;
 }
 
-.book:hover {
-  transform: scale(1.05);
+/* Styles for the book author */
+.book h4 {
+  font-size: 1.2em;
+  margin: 0;
+  color: #666;
 }
 
-/* Code styling */
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+
+.BookList p span {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 2px;
+
 }
